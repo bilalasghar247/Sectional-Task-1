@@ -1,0 +1,209 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.grey,
+        body:SafeArea(
+          child:Column(
+          children: <Widget>[
+            Row(
+            children: <Widget>[
+              Stack(
+                children: <Widget>[
+
+                    // Max Size
+                  Container(
+                    height:160,
+                    width: 376,
+                    color: Colors.deepPurple,
+                    child:Row(
+                      children: <Widget>[
+                        Container(
+                            child: CircleAvatar(
+                              radius: 30,
+                              backgroundImage: AssetImage('img/3.jpg'),
+                            ),
+                          ),
+                        Container(
+                          margin:EdgeInsets.fromLTRB(15,0,0,0),
+                         // color: Colors.yellow,
+                            child: Text(
+                              'MY GOAL',
+                              style: TextStyle(fontSize: 24.0, color: Colors.white,fontWeight:FontWeight.bold,),
+                            ),
+                          ),
+                        Container(
+                          margin:EdgeInsets.fromLTRB(150,0,0,0),
+                          child:Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.playlist_add_outlined,
+                                  size: 35.0,
+                                  color: Colors.white,
+                                ),
+                              ],
+                            ),
+
+                          ),
+                        ],
+                    ),
+
+
+                  ),
+                  Container(
+                    //color:Colors.red,
+                    margin:EdgeInsets.fromLTRB(20,10,0,0),
+                    width:100,
+                    height:40,
+                    child:Text(
+                        'Feburary',
+                        style: TextStyle(fontSize: 18.0, color: Colors.white),
+                    ),
+                  ),
+
+
+                  Container(
+                    margin: EdgeInsets.fromLTRB(40, 120,0,0),
+                    height:75,
+                    width: 300,
+                    color: Colors.white,
+                    child:Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.arrow_circle_down_rounded,
+                          size: 35.0,
+                          color: Colors.black,
+                        ),
+                        Container(
+                            child: Slider(
+                                value:1.0,
+                                min: 1.0,
+                                max: 100.0,
+                                divisions: 10,
+                                activeColor: Colors.green,
+                                inactiveColor: Colors.orange,
+                                label: 'Set volume value',
+
+                            )
+                        ),
+
+                      ],
+                    ),
+                    ),
+                ],
+              ),
+          ]
+          ),
+            Row(
+                children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(10,10,0,0),
+                child: Text(
+                'This Week',
+                  style: TextStyle(fontSize: 20.0, color: Colors.white,fontWeight:FontWeight.bold,),
+            ),
+    ),
+              ],
+              ),
+              Row(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.fromLTRB(0,0,0,0),
+                height:200,
+                width: 375,
+             //   color: Colors.blue,
+                child:Row(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                              'img/1.jpg'),
+                          fit: BoxFit.fill,
+                        ),
+                        // shape: BoxShape.circle,
+                      ),
+                      margin: EdgeInsets.fromLTRB(20,0,0,0),
+                        width: 105,
+                      height:140,
+                      //color: Colors.white,
+                      ),
+                    Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                              'img/2.jpg'),
+                          fit: BoxFit.fill,
+                        ),
+                        // shape: BoxShape.circle,
+                      ),
+                      margin: EdgeInsets.fromLTRB(15,0,0,0),
+                      width: 105,
+                      height:140,
+                      // color: Colors.white,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                              'img/3.jpg'),
+                          fit: BoxFit.fill,
+                        ),
+                        // shape: BoxShape.circle,
+                      ),
+                      margin: EdgeInsets.fromLTRB(15,0,0,0),
+                      width: 105,
+                      height:140,
+                      // color: Colors.white,
+                    ),
+                    ],
+                ),
+
+              ),
+            ]
+          ),
+            Row(
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.fromLTRB(10,0,0,0),
+                    child: Text(
+                      'Combine Routine',
+                      style: TextStyle(fontSize: 20.0, color: Colors.white,fontWeight:FontWeight.bold,),
+                    ),
+                  ),
+                ],
+              ),
+            Row(
+                children: <Widget>[
+                  Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                            'img/4.jpg'),
+                        fit: BoxFit.fill,
+                      ),
+                      // shape: BoxShape.circle,
+                    ),
+                    margin: EdgeInsets.fromLTRB(20,10,0,0),
+                    height:175,
+                    width: 340,
+                    // color:Colors.red,
+                  ),
+                ],
+              ),
+            ]
+        ),
+      )
+      ),
+    );
+  }
+}
+
+
+
